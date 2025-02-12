@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENDING</title>
+</head>
+<style>
+    body {
+    background-color: rgb(26, 26, 26);
+    color: rgb(218, 218, 218);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1%;
+}
+</style>
+<body>
+    <p hidden id="lorenzo">The suspect "Lorenzo" has been arested. <br><br>
+
+    
+    </p>
+    <p hidden id="john">The suspect "John" has been arested.</p>
+    <p hidden id="vince">The suspect "Vince" has been arested.</p>
+    <p hidden id="yohan">The suspect "Yohan" has been arested.</p>
+</body>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.get("jvshsh") === "bhth") {
+        document.getElementById('lorenzo').hidden = false;
+    }else if(urlParams.get("jvshsh") === "ytrh") {
+        document.getElementById('john').hidden = false;
+    }else if(urlParams.get("jvshsh") === "gjhw") {
+        document.getElementById('vince').hidden = false;
+    }else if(urlParams.get("jvshsh") === "yhkg") {
+        document.getElementById('yohan').hidden = false;
+    }
+</script>
+</html>

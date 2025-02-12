@@ -98,5 +98,21 @@
   function clue7() {
     document.getElementById("clue7").hidden = false;
   }
+  /*ACCUSATION*/
+  const john = document.getElementById('john');
+  const lorenzo = document.getElementById('lorenzo');
+  const vince = document.getElementById('vince');
+  const yohan = document.getElementById('yohan');
+  function arrest() {
+    if(john.checked) {
+        window.location.href = "ending.html?jvshsh=ytrh";
+    } else if(lorenzo.checked) {
+        window.location.href = "ending.html?jvshsh=bhth";
+    } else if(vince.checked) {
+        window.location.href = "ending.html?jvshsh=gjhw";
+    } else if(yohan.checked) {
+        window.location.href = "ending.html?jvshsh=yhkg";
+    }
+  }
     </script>
 </html>
