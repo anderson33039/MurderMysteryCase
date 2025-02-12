@@ -53,15 +53,16 @@
     <h2 id="clue2" hidden="hidden">"101291" is <a onclick="clue5();">written</a> on the cloth.</h2>
     <h2 id="clue5" hidden>It is written by the <a onclick="clue6();">victim</a>.</h2>
     <h2 id="clue6" hidden>The victim is left handed.</h2>
+    
     <button onclick="accuse()" style="width: 200px; height: 60px; font-size: xx-large;">ACCUSE!</button><br><br>
     <dialog id="accuse" style="background-color: rgb(26, 26, 26);color: white;">
         WHO IS THE SUSPECT?
-        <p><input type="checkbox"id="">JOHN</p>
-        <p><input type="checkbox"id="">LORENZO</p>
-        <p><input type="checkbox"id="">VINCE</p>
-        <p><input type="checkbox"id="">YOHAN</p>
+        <p><input type="checkbox"id="john">JOHN</p>
+        <p><input type="checkbox"id="lorenzo">LORENZO</p>
+        <p><input type="checkbox"id="vince">VINCE</p>
+        <p><input type="checkbox"id="yohan">YOHAN</p>
         <button onclick="arrest()" style="width: 150px; height: 30px;">ARREST</button><br><br>
-        <button onclick="close()">CLOSE</button>
+        <button id="closeButton">CLOSE</button>
     </dialog>
     <button class="back" id="back">back</button>
 </body>
@@ -82,9 +83,11 @@
     function accuse() {
         document.getElementById('accuse').showModal()
     }
-    function close() {
-        $("#accuse").hide()
-    }
+    const dialog = document.getElementById('accuse');
+    const clbtn = document.getElementById('closeButton');
+    clbtn.addEventListener("click", () => {
+        dialog.close();
+    })
     const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('evi') === '001') {
     
