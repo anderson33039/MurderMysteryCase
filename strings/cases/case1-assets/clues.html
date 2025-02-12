@@ -53,7 +53,9 @@
     <h2 id="clue2" hidden="hidden">"101291" is <a onclick="clue5();">written</a> on the cloth.</h2>
     <h2 id="clue5" hidden>It is written by the <a onclick="clue6();">victim</a>.</h2>
     <h2 id="clue6" hidden>The victim is left handed.</h2>
-    
+    <img hidden id="clue1" src="../../../assets/images/nerloz.jpg" onclick="clue7()"><br>
+    <h2 hidden id="clue1des">A calling card from Lorenzo.</h2>
+    <h2 hidden id="clue7">It is found on the <a href="lorenzo.html?cc=true">victim's pocket</a>.</h2>
     <button onclick="accuse()" style="width: 200px; height: 60px; font-size: xx-large;">ACCUSE!</button><br><br>
     <dialog id="accuse" style="background-color: rgb(26, 26, 26);color: white;">
         WHO IS THE SUSPECT?
@@ -90,7 +92,11 @@
     })
     const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('evi') === '001') {
-    
+    document.getElementById('clue1').hidden = false;
+    document.getElementById('clue1des').hidden = false;
+  }
+  function clue7() {
+    document.getElementById("clue7").hidden = false;
   }
     </script>
 </html>

@@ -54,6 +54,13 @@
           You: "You seems suspicious, you keep pointing at others."<br><br>
           
           Lorenzo: "Am just helping you Detective. It's up to you if you will listen or not."</p>
+          <p hidden="hidden" id="ccrev">==========<br>
+            Lorenzo: "Oh, you found my calling card in the victim's pocket."<br><br>
+
+            You: "Yes sir."<br><br>
+
+            Lorenzo: "Well, I indeed gave it to him... but what's the point? I mean it is just a calling card though."
+          </p>
     </div>
     </div>
     
@@ -68,6 +75,10 @@
     }
     function clue7() {
       document.getElementById('clue7').hidden = false;
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.get("cc") === "true") {
+        document.getElementById('ccrev').hidden = false;
     }
 </script>
 </html>
