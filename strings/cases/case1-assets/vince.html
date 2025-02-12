@@ -46,6 +46,11 @@
             <b>Physical appearance(s):</b> <br>
             Vince is a visually striking individual, boasting a distinctive beard braided with colorful threads that adds to his eclectic charm. His deep, piercing blue eyes seem to bore into those he meets, while his intricate, tribal-style tattoos on his arms and chest tell the story of his adventurous travels abroad. Vince's wild, curly brown hair is often tied back with a leather strap, and he wears a red cloth bandana loosely around his neck. His rugged, athletic build, honed from years of rock climbing and outdoor adventures, is complemented by his unique style, which blends bohemian and biker chic elements, reflecting his love of freedom and the open road. A silver ring on his left thumb, adorned with a small, polished stone, adds a touch of elegance to his overall aesthetic.
         </p>
+        <p hidden id="tots">==========<br>
+            Vince: (sobbing)"I wish I went to him earlier."<br><br>
+            You: "Why you didn't went to him earlier?" <br><br>
+            Vince: "Well, I have so many works to do and... (wipes his own tears) I couldn't text him back."
+        </p>
     </div>
     </div>
     
@@ -55,5 +60,9 @@
     document.getElementById('back').addEventListener('click', () => {
         window.location.href = 'prelim.html'
     })
+    const urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.get('gthj') === "yuio") {
+        document.getElementById('tots').hidden = false;
+    }
 </script>
 </html>

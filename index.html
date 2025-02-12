@@ -18,6 +18,7 @@
         font-weight: 100;
     }
     .start {
+        font-size: large;
         border-radius: 20px;
         border: none;
         width: 30%;
@@ -32,11 +33,14 @@
     <img src="assets/images/logo.png" width="200px">
     <h1>MYSTERY MURDER CASE</h1><br><br>
     <button id="solve" class="start">SOLVE</button><br><br>
-    <p>All rights reserved ©Anderson_2025</p>
+    <button id="help" class="start">HELP</button>
 </body>
 <script>
     document.getElementById("solve").addEventListener('click', () => {
         window.location.href = 'strings/files.html';
+    })
+    document.getElementById("help").addEventListener('click', () => {
+        window.location.href = 'assets/in-game-assets/ctrym.html';
     })
 </script>
 </html>

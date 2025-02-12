@@ -48,11 +48,13 @@
     }
 </style>
 <body>
+    <form action="victim.html">
+        <button type="submit" style="width: 200px; height: 50px;font-size: larger;">VIEW VICTIM'S PROFILE</button>
+    </form>
+    <br>=============<br>
     <img src="../../../assets/images/cloth.jpg" alt="" onclick="clue2();">
     <h2>A red cloth from the suspect.</h2>
-    <h2 id="clue2" hidden="hidden">"101291" is <a onclick="clue5();">written</a> on the cloth.</h2>
-    <h2 id="clue5" hidden>It is written by the <a onclick="clue6();">victim</a>.</h2>
-    <h2 id="clue6" hidden>The victim is left handed.</h2>
+    <h2 id="clue2" hidden="hidden">"101291" is written on the cloth.</h2>
     <img hidden id="clue1" src="../../../assets/images/nerloz.jpg" onclick="clue7()"><br>
     <h2 hidden id="clue1des">A calling card from Lorenzo.</h2>
     <h2 hidden id="clue7">It is found on the <a href="lorenzo.html?cc=true">victim's pocket</a>.</h2>
@@ -75,13 +77,6 @@
     document.getElementById('back').addEventListener('click', () => {
         window.location.href = 'prelim.html'
     })
-    function clue5() {
-        document.getElementById('clue5').hidden = false;
-    }
-
-    function clue6() {
-        document.getElementById('clue6').hidden = false;
-    }
     function accuse() {
         document.getElementById('accuse').showModal()
     }
