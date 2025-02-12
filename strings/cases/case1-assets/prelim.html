@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouble in Tronico</title>
+</head>
+<style>
+    body {
+        background-color: rgb(26, 26, 26);
+        color: rgb(218, 218, 218);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 1%;
+    }
+    p {
+        font-size: large;
+    }
+    .file {
+        width: 10%;
+        height: 40px;
+    }
+    .test {
+        color: rgb(218, 218, 218);;
+        border: none;
+        background-color: rgb(26, 26, 26);;
+        width: 60%;
+    }
+    img {
+        border: 2px solid black;
+        margin-top: 10px;
+        width: auto;
+        height: 150px;
+    }
+    .file-container .file {
+        width: fit-content;
+        background-color: darkgrey;
+        font-weight: 900;
+        height: 250px;
+        border: 5px solid black;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <h1>A Murder in Tronico</h1>
+    <div id="files" class="file-container">
+        <button id="file1" class="file">
+            <img src="../../../assets/images/FILE.jpg" alt=""><br>
+            FILES
+        </button><br>
+        <button id="file2" class="file">
+            <img src="../../../assets/images/suspects.jpg" alt=""><br>
+            JOHN
+        </button>
+        <button id="file3" class="file">
+            <img src="../../../assets/images/suspects.jpg" alt=""><br>
+            LORENZO
+        </button>
+        <button id="file4" class="file">
+            <img src="../../../assets/images/suspects.jpg" alt=""><br>
+            VINCE
+        </button>
+        <button id="file5" class="file">
+            <img src="../../../assets/images/suspects.jpg" alt=""><br>
+            YOHAN
+        </button><br>
+
+        <button id="back" style="width: 200px; height: 40px;">BACK</button>
+    </div>
+<!------------FILES AHEAD------------>
+
+</body>
+<script>
+    document.getElementById('file1').addEventListener('click', () => {
+        window.location.href = 'clues.html';
+    });
+    document.getElementById('file2').addEventListener('click', () => {
+        window.location.href = 'john.html';
+    });
+    document.getElementById('file3').addEventListener('click', () => {
+        window.location.href = 'lorenzo.html';
+    });
+    document.getElementById('file4').addEventListener('click', () => {
+        window.location.href = 'vince.html';
+    });
+    document.getElementById('file5').addEventListener('click', () => {
+        window.location.href = 'yohan.html';
+    });
+    document.getElementById('back').onclick = function() {
+        window.location.href = "../../files.html"
+    }
+</script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouble in Tronico</title>
+</head>
+<style>
+    body {
+        background-color: rgb(26, 26, 26);
+        color: rgb(218, 218, 218);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 1%;
+    }
+    p {
+        font-size: large;
+    }
+    .data {
+        width: 60%;
+    }
+    .data-container {
+        display: flex;
+        text-align: left;
+        justify-content: center;
+    }
+    .back {
+        width: 20%;
+        height: 30px;
+    }
+</style>
+<body>
+    <h1>BASIC INFORMATION</h1>
+    <div class="data-container">
+        <div class="data">
+         <p>Name: Lorenzo Beniz Villa <br>
+            Age: 32 <br>
+            Height: 5'10" (178 cm) <br>
+            Weight: 154lbs (70 kg) <br>
+            Birthday: <a onclick="clue7();">October 12, 1991</a><br><br>
+
+            Relationship to victim: <a onclick="ask()">Recent costumer</a> <br><br>
+
+            <b>Physical appearance(s):</b> <br>
+            Lorenzo is a charismatic individual with a distinctive appearance. His short, dark brown hair is often styled in a messy, effortless look, framing his bright, piercing blue eyes that sparkle with curiosity. A strong jawline and a small scar above his left eyebrow, a souvenir from a childhood accident, add a touch of ruggedness to his features. Lorenzo's smile is his most disarming asset, charming and slightly crooked, making him instantly endearing and approachable. He often wears a silver necklace with a small, intricately designed pendant, and his signature accessory is a red cloth, which he wears as a bandana or tied around his wrist, adding a pop of color to his outfit.
+        </p>
+        <p id="clue3" hidden="hidden">==========<br>Lorenzo: "Yes, he is my customer recently. He bought a bottle of milk and a coffee. He looks so nervous that time and left immediately." <br><br>"A man followed her wearing a red scarf and I heard he called him '<a href="john.html?foundclue=true">John</a>' before the suspect stab him. "</p>
+        <p id="clue7" hidden>==========<br>Lorenzo: "My birthday is written on a piece of cloth? hmm... The victim is just a recent customer of mine; how would they know my birthday? Maybe your conclusions are incorrect, Detective."<br><br>
+        
+          "By the way, I heard the rumor that <a href="yohan.html?ask=true">Yohan</a> had an argument with a victim yesterday."<br><br>
+          
+          You: "You seems suspicious, you keep pointing at others."<br><br>
+          
+          Lorenzo: "Am just helping you Detective. It's up to you if you will listen or not."</p>
+    </div>
+    </div>
+    
+    <button class="back" id="back">BACK</button>
+</body>
+<script>
+    document.getElementById('back').addEventListener('click', () => {
+        window.location.href = 'prelim.html'
+    })
+    function ask() {
+        document.getElementById('clue3').hidden = false;
+    }
+    function clue7() {
+      document.getElementById('clue7').hidden = false;
+    }
+</script>
+</html>

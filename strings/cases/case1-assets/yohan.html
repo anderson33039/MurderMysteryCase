@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouble in Tronico</title>
+</head>
+<style>
+    body {
+        background-color: rgb(26, 26, 26);
+        color: rgb(218, 218, 218);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 1%;
+    }
+    p {
+        font-size: large;
+    }
+    .data {
+        width: 60%;
+    }
+    .data-container {
+        display: flex;
+        text-align: left;
+        justify-content: center;
+    }
+    .back {
+        width: 20%;
+        height: 30px;
+    }
+</style>
+<body>
+    <h1>BASIC INFORMATION</h1>
+    <div class="data-container">
+        <div class="data">
+         <p>Name: Yohan Bruce Venice <br>
+            Age: 29 <br>
+            Height: 6'2" (188 cm) <br>
+            Weight: 190lbs (86 kg) <br>
+            Birthday: November 02, 1994 <br><br>
+
+            Relationship to victim: Cousin <br><br>
+
+            <b>Physical appearance(s):</b> <br>
+            Yohan's appearance is a testament to his unique personality and experiences. His distinctive asymmetrical haircut, with the left side shaved close to the head and the right side falling to his shoulder, sets him apart. His unsettling pale green eyes, inherited from his mysterious mother, seem to hold a depth of wisdom. Yohan's body is a canvas of intricate, symbolic tattoos on his arms and torso, collected during his travels. A sharp jawline, accentuated by a distinctive scar running from the corner of his mouth to his earlobe, adds to his rugged charm. He often wears a red cloth as a headband, his signature accessory. Yohan's lean, muscular build, honed from years of martial arts training and outdoor adventures, is complemented by his eclectic bohemian style. A silver snake earring coiled around his left earlobe adds a touch of whimsy to his overall aesthetic.
+        </p>
+        <div id="hidden-element" style="display: none;">
+          <p>============ <br>Yohan: "Yeah, we had an argument yesterday. He went home drunk and he broke my favorite flower vase. But I already forgave him after that. I never had a gut to kill him because of that little mistake."</p>
+
+          <a href="clues.html?evi=001">ANOTHER EVIDENCE FOUND!</a>
+        </div>
+    </div>
+    </div>
+    
+    <button class="back" id="back">BACK</button>
+</body>
+<script>
+    document.getElementById('back').addEventListener('click', () => {
+        window.location.href = 'prelim.html'
+    })
+    const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('ask') === 'true') {
+    document.getElementById('hidden-element').style.display = 'block';
+  }
+</script>
+</html>

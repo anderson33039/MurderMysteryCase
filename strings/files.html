@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(26, 26, 26);
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        align-items: center;
+        text-align: center;
+        margin-top: 11%;
+    }
+    img {
+        border: 2px solid black;
+        margin-top: 10px;
+        width: 140px;
+        height: 150px;
+    }
+    .case {
+        background-color: darkgrey;
+        font-weight: 900;
+        height: 250px;
+        border: 5px solid black;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <h1>CHOOSE A MURDER CASE:</h1>
+    <div class="case-container">
+        <button id="case1" class="case">
+            <img src="../assets/images/troubletronico.jpg" alt=""><br>
+            TROUBLE IN TRONICO
+        </button>
+        <button class="case">
+            <img src="../assets/images/qm.jpg" alt=""><br>
+            GOT KILLER AWAY
+        </button>
+        <button class="case">
+            <img src="../assets/images/qm.jpg" alt=""><br>
+            THE HEAD
+        </button>
+        <button class="case">
+            <img src="../assets/images/qm.jpg" alt=""><br>
+            SHINE WITHOUT STARS
+        </button>
+    </div>
+</body>
+<script>
+    document.getElementById('case1').addEventListener('click', () => {
+        window.location.href = 'cases/case1.html';
+    })
+</script>
+</html>

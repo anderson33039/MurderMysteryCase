@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouble in Tronico</title>
+</head>
+<style>
+    body {
+        background-color: rgb(26, 26, 26);
+        color: rgb(218, 218, 218);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 1%;
+    }
+    p {
+        font-size: large;
+    }
+    .file {
+        width: 10%;
+        height: 40px;
+    }
+    .test {
+        color: rgb(218, 218, 218);;
+        border: none;
+        background-color: rgb(26, 26, 26);;
+        width: 60%;
+    }
+    img {
+        border: 2px solid black;
+        margin-top: 10px;
+        width: auto;
+        height: 230px;
+    }
+    .file-container .file {
+        width: fit-content;
+        background-color: darkgrey;
+        font-weight: 900;
+        height: 250px;
+        border: 5px solid black;
+        border-radius: 10px;
+    }
+    .back {
+        width: 20%;
+        height: 30px;
+    }
+</style>
+<body>
+    <img src="../../../assets/images/cloth.jpg" alt="" onclick="clue2();">
+    <h2>A red cloth from the suspect.</h2>
+    <h2 id="clue2" hidden="hidden">"101291" is <a onclick="clue5();">written</a> on the cloth.</h2>
+    <h2 id="clue5" hidden>It is written by the <a onclick="clue6();">victim</a>.</h2>
+    <h2 id="clue6" hidden>The victim is left handed.</h2>
+    <button onclick="accuse()" style="width: 200px; height: 60px; font-size: xx-large;">ACCUSE!</button><br><br>
+    <dialog id="accuse" style="background-color: rgb(26, 26, 26);color: white;">
+        WHO IS THE SUSPECT?
+        <p><input type="checkbox"id="">JOHN</p>
+        <p><input type="checkbox"id="">LORENZO</p>
+        <p><input type="checkbox"id="">VINCE</p>
+        <p><input type="checkbox"id="">YOHAN</p>
+        <button onclick="arrest()" style="width: 150px; height: 30px;">ARREST</button><br><br>
+        <button onclick="close()">CLOSE</button>
+    </dialog>
+    <button class="back" id="back">back</button>
+</body>
+    <script>
+    function clue2() {
+            document.getElementById('clue2').hidden = false;
+        }
+    document.getElementById('back').addEventListener('click', () => {
+        window.location.href = 'prelim.html'
+    })
+    function clue5() {
+        document.getElementById('clue5').hidden = false;
+    }
+
+    function clue6() {
+        document.getElementById('clue6').hidden = false;
+    }
+    function accuse() {
+        document.getElementById('accuse').showModal()
+    }
+    function close() {
+        $("#accuse").hide()
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('evi') === '001') {
+    
+  }
+    </script>
+</html>

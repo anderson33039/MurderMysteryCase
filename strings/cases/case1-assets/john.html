@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouble in Tronico</title>
+</head>
+<style>
+    body {
+        background-color: rgb(26, 26, 26);
+        color: rgb(218, 218, 218);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 1%;
+    }
+    p {
+        font-size: large;
+    }
+    .data {
+        width: 60%;
+    }
+    .data-container {
+        display: flex;
+        text-align: left;
+        justify-content: center;
+    }
+    .back {
+        width: 20%;
+        height: 30px;
+    }
+</style>
+<body>
+    <h1>BASIC INFORMATION</h1>
+    <div class="data-container">
+        <div class="data">
+         <p>Name: John Felix Bufrel <br>
+            Age: 41 <br>
+            Height: 6'3" (191 cm) <br>
+            Weight: 220lbs (100 kg) <br>
+            Birthday: October 12, 1982 <br><br>
+
+            Relationship to victim: None <br><br>
+
+            <b>Physical appearance(s):</b> <br>
+            John is a ruggedly handsome individual with a distinctive appearance. His shaved head and well-groomed beard, flecked with gray, give him a sense of authority and maturity. His deep, warm brown eyes convey a sense of kindness, while his strong, athletic build, honed from years of playing rugby and working outdoors, commands respect. A slightly crooked nose and a collection of scars on his arms and torso hint at a adventurous and possibly tumultuous past. John's style is unmistakably rugged and masculine, reflected in his leather jacket, worn and faded silver watch, and signature red cloth pocket square, which adds a touch of elegance to his overall aesthetic.
+        </p>
+        <div id="hidden-element" style="display: none;">
+          <p>============ <br>John: "What?! That guy might just framing me! I didn't even know this guy! You call yourself a detective?! Believing others without evidences?!" <br><br>You: "Sir, calm down. We're just asking you."</p>
+        </div>
+    </div>
+  </div>
+    
+    <button class="back" id="back">BACK</button>
+</body>
+<script>
+    document.getElementById('back').addEventListener('click', () => {
+        window.location.href = 'prelim.html'
+    });
+    const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('foundclue') === 'true') {
+    document.getElementById('hidden-element').style.display = 'block';
+  }
+</script>
+</html>

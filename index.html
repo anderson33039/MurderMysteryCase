@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Murder Case</title>
+</head>
+<style>
+    body {
+        background-color: rgb(26, 26, 26);
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        align-items: center;
+        text-align: center;
+        margin-top: 13%;
+    }
+    h5 {
+        font-weight: 100;
+    }
+    .start {
+        border-radius: 20px;
+        border: none;
+        width: 30%;
+        height: 40px;
+    }
+    .start:hover {
+        background-color: grey;
+    }
+</style>
+<body>
+    <h5>All names, places, events, and other details are work of fiction only.</h5>
+    <h1>MYSTERY MURDER CASE</h1><br><br>
+    <button id="solve" class="start">SOLVE</button><br><br>
+    <p>All rights reserved ©Anderson_2025</p>
+</body>
+<script>
+    document.getElementById("solve").addEventListener('click', () => {
+        window.location.href = 'strings/files.html';
+    })
+</script>
+</html>
